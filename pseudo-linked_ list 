@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class PseudoLinkedList {
-    public static int[] number;   // main array
-    public static int[] tempnum;  // temporary array for resizing
-    public static int counter = 0; // number of elements
+    public static int[] number; 
+    public static int[] tempnum;
+    public static int counter = 0;
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -57,7 +57,7 @@ public class PseudoLinkedList {
         System.out.println("Ending...");
     }
 
-    // Add element at the end
+    
     public static void add(int x) {
         tempnum = number;
         number = new int[counter + 1];
@@ -71,7 +71,7 @@ public class PseudoLinkedList {
         System.out.println(x + " added.");
     }
 
-    // Peek (first element)
+    
     public static int peek() {
         if (counter == 0) {
             return -1;
@@ -79,7 +79,7 @@ public class PseudoLinkedList {
         return number[0];
     }
 
-    // Poll (remove first element)
+    
     public static int poll() {
         if (counter == 0) {
             return -1;
@@ -94,7 +94,7 @@ public class PseudoLinkedList {
         return first;
     }
 
-    // Pop (remove last element)
+  
     public static int pop() {
         if (counter == 0) {
             return -1;
@@ -109,14 +109,14 @@ public class PseudoLinkedList {
         return last;
     }
 
-    // Clear all elements
+   
     public static void clear() {
         number = null;
         counter = 0;
         System.out.println("List cleared.");
     }
 
-    // Display array
+   
     public static void display() {
         if (counter == 0) {
             System.out.println("[]");
